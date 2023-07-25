@@ -1,0 +1,16 @@
+{
+    "name": "latex-env",
+    "customizations": {
+        "extensions": [
+            "James-Yu.latex-workshop",
+            "vscode-icons-team.vscode-icons",
+            "eamodio.gitlens",
+            "mhutchie.git-graph",
+            "VisualStudioExptTeam.vscodeintellicode"
+        ]
+    },
+    "dockerFile": "Dockerfile",
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
+    ]
+}
