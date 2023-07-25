@@ -1,13 +1,15 @@
 {
     "name": "latex-env",
     "customizations": {
-        "extensions": [
-            "James-Yu.latex-workshop",
-            "vscode-icons-team.vscode-icons",
-            "eamodio.gitlens",
-            "mhutchie.git-graph",
-            "VisualStudioExptTeam.vscodeintellicode"
-        ]
+        "vscode": {
+            "extensions": [
+                "James-Yu.latex-workshop",
+                "vscode-icons-team.vscode-icons",
+                "eamodio.gitlens",
+                "mhutchie.git-graph",
+                "VisualStudioExptTeam.vscodeintellicode"
+            ]
+        }
     },
     "dockerFile": "Dockerfile",
     "mounts": [
