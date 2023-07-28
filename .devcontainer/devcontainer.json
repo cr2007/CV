@@ -1,18 +1,19 @@
 {
-    "name": "latex-env",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "James-Yu.latex-workshop",
-                "vscode-icons-team.vscode-icons",
-                "eamodio.gitlens",
-                "mhutchie.git-graph",
-                "VisualStudioExptTeam.vscodeintellicode"
-            ]
-        }
-    },
-    "dockerFile": "Dockerfile"
-    // "mounts": [
-    //     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
-    // ]
+	"name": "latex-env",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"James-Yu.latex-workshop",
+				"vscode-icons-team.vscode-icons",
+				"eamodio.gitlens",
+				"mhutchie.git-graph",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"EditorConfig.EditorConfig"
+			]
+		}
+	},
+	"dockerFile": "Dockerfile"
+	// "mounts": [
+	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
+	// ]
 }
