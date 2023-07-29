@@ -12,8 +12,9 @@
 			]
 		}
 	},
-	"dockerFile": "Dockerfile"
+	"dockerFile": "Dockerfile",
 	// "mounts": [
 	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
 	// ]
+	"postStartCommand": "chmod +x create_tag.sh"
 }
