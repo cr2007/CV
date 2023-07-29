@@ -9,3 +9,7 @@ You can download the latest CV as PDF by clicking on the [![latest release tag](
 badge.
 
 To access the older versions, navigate to the [Releases](https://github.com/cr2007/CV/releases) section on the right.
+
+<!-- Credits:
+- [The perfect VS Code + Docker + LaTeX setup](https://medium.com/@kombustor/vs-code-docker-latex-setup-f84128c6f790)
+- [Build Your CV with Docker and GitHub Actions](https://youtu.be/DMwbXN3QKbs) -->
