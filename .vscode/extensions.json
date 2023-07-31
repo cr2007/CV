@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"James-Yu.latex-workshop",
+		"vscode-icons-team.vscode-icons",
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"EditorConfig.EditorConfig",
+		"github.vscode-github-actions"
+	]
+}
