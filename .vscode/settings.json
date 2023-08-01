@@ -11,4 +11,5 @@
 	"editor.renderWhitespace": "all",
 	"files.trimTrailingWhitespace": true,
 	"editor.wordWrap": "on",
+	"git.autofetch": true
 }
