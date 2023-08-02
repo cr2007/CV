@@ -7,14 +7,18 @@ function list_previous_tags {
 }
 
 # Function to prompt the user for commit hash
-function get_commit_hash {
-  echo -e -n "Enter the \e[1mcommit hash\e[0m you want to tag\n(If you want to enter a shortened one, enter the first 7 digits of the commit hash)\n"
-  read commit_hash
+function get_commit_hash_excerpt {
+  echo -e -n "Enter the \e[1mcommit hash\e[0m excerpt (minimum 7 characters) you want to tag: "
+  read commit_hash_excerpt
 
   # Check if the commit hash is empty
-  if [ -z "$commit_hash" ]; then
-    echo "Error: Commit hash cannot be empty."
+  if [ -z "$commit_hash_excerpt" ]; then
+    echo -e "\e[31;1mError:\e[0m Commit hash cannot be empty."
     get_commit_hash
+  elif [ ${#commit_hash_excerpt} -lt 7 ]; then
+    echo -e "\e[31;1mError:\e[0m Commit hash excerpt must be at least 7 characters long."
+    echo -e "Get the hash by running the following command: \e[1;34mgit log\e[0m"
+    exit 1
   fi
 }
 
@@ -32,23 +36,17 @@ function get_tag_name {
 # Check if the script is called with the -c flag
 if [[ "$1" == "-c" ]]; then
   # Prompt the user for commit hash
-  get_commit_hash
+  get_commit_hash_excerpt
 
-  # Verify if the commit hash exists using grep
-  if git log --pretty=oneline | cut -d' ' -f1 | grep -q "^$commit_hash$"; then
-    echo -e "Commit hash \e[1;33m'$commit_hash'\e[0m exists in the repository."
-  else
-    # Checks with the first 7 digits of the commit hash
-    echo -e "\e[31;1mError:\e[0m Commit hash '$commit_hash' does not exist."
-    echo -e "\e[1;33mRe-checking with first 7 digits of commit hash\e[0m"
-
-	if git log --pretty=oneline | cut -d' ' -f1 | grep -E -q "^${commit_hash:0:7}"; then
-      echo -e "Commit hash \e[1;33m'$commit_hash'\e[0m exists in the repository."
-    else
-      echo -e "\e[31;1mError:\e[0m Commit hash '$commit_hash' does not exist."
-      exit 1
-    fi
+  # Verify if the commit hash excerpt exists in the repository
+  full_commit_hash=$(git log --pretty=format:%H | grep -E -m 1 "^${commit_hash_excerpt}")
+  if [ -z "$full_commit_hash" ]; then
+    echo -e "\e[31;1mError:\e[0m Commit hash excerpt '$commit_hash_excerpt' does not exist in the repository."
+	echo -e "Get the \e[1mcommit hash excerpt\e[0m by running the following command: \e[1;34mgit log\e[0m"
+    exit 1
   fi
+
+  echo -e "Commit hash \e[1;33m'$commit_hash_excerpt'\e[0m exists in the repository."
 
   # List all previous Git tags
   list_previous_tags
@@ -63,7 +61,7 @@ if [[ "$1" == "-c" ]]; then
   done
 
   # Run the command to create the tag for the specified commit
-  git tag "$tag_name" "$commit_hash"
+  git tag "$tag_name" "$full_commit_hash"
 
 else
   # List all previous Git tags
