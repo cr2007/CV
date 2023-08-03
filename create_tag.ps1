@@ -7,3 +7,33 @@ function list_previous_tags {
 	Write-Host "Previous Git tags:"
 	git tag
 }
+
+# Function to prompt the user for commit hash
+function get_commit_hash_excerpt {
+	# Print out a message
+	Write-Host "Enter the commit hash:"
+	# Read the commit hash
+	$commit_hash = Read-Host
+
+	# Check if the commit hash is empty
+	if ([string]::IsNullOrEmpty($commit_hash)) {
+		# Print out a message
+		Write-Host "Error: " -ForegroundColor DarkRed -NoNewline; Write-Host "Commit hash cannot be empty"
+
+		# Prompt the user again
+		get_commit_hash_excerpt
+	# else if the commit hash is less than 7 characters
+	} elseif ($commit_hash.Length -lt 7) {
+		# Print out error message
+		Write-Host "Error: " -ForegroundColor DarkRed -NoNewline; Write-Host "Commit hash must be at least 7 characters"
+
+		# Prints message for the user to get the hash
+		Write-Host "Get the hash by running the following command: " -NoNewline; Write-Host "git log" -ForegroundColor Cyan;
+
+		# Exit the program
+		Exit
+	}
+
+	# Return the commit hash
+	return $commit_hash
+}
