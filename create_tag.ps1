@@ -11,19 +11,19 @@ function list_previous_tags {
 # Function to prompt the user for commit hash
 function get_commit_hash_excerpt {
 	# Print out a message
-	Write-Host "Enter the commit hash: " -NoNewLine
+	$commit_hash_excerpt = Read-Host -Prompt "Enter the commit hash"
 	# Read the commit hash
 	$commit_hash = Read-Host
 
 	# Check if the commit hash is empty
-	if ([string]::IsNullOrEmpty($commit_hash)) {
+	if ([string]::IsNullOrEmpty($commit_hash_excerpt)) {
 		# Print out a message
 		Write-Host "Error: " -ForegroundColor DarkRed -NoNewline; Write-Host "Commit hash cannot be empty"
 
 		# Prompt the user again
 		get_commit_hash_excerpt
 	# else if the commit hash is less than 7 characters
-	} elseif ($commit_hash.Length -lt 7) {
+	} elseif ($commit_hash_excerpt.Length -lt 7) {
 		# Print out error message
 		Write-Host "Error: " -ForegroundColor DarkRed -NoNewline; Write-Host "Commit hash must be at least 7 characters"
 
