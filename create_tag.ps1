@@ -39,3 +39,25 @@ function Get-CommitHashExcerpt {
 	# Return the commit hash
 	return $commit_hash_excerpt
 }
+
+# Function to prompt the user for tag name
+function Get-TagName {
+	# Read the tag name
+	Read-Host -Prompt "Enter the tag name: "
+
+	# Write-Host "Enter the tag name: " -NoNewline
+	# $tag_name = Read-Host
+
+
+	# Check if the tag name is empty
+	if ([string]::IsNullOrEmpty($tag_name)) {
+		# Print out a message
+		Write-Host "Error: " -ForegroundColor DarkRed -NoNewline; Write-Host "Tag name cannot be empty"
+
+		# Prompt the user again
+		Get-TagName
+	}
+
+	# Return the tag name
+	return $tag_name
+}
