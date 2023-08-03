@@ -11,7 +11,7 @@ function list_previous_tags {
 # Function to prompt the user for commit hash
 function get_commit_hash_excerpt {
 	# Print out a message
-	Write-Host "Enter the commit hash:"
+	Write-Host "Enter the commit hash: " -NoNewLine
 	# Read the commit hash
 	$commit_hash = Read-Host
 
