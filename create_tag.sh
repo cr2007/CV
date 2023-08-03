@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# To run the code, make sure it has executable permissions
+# chmod +x create_tag.sh
+#
+# To create a tag for the latest commit, run the following command
+# ./create_tag.sh
+#
+# If you want to tag a particular commit, run the following command
+# ./create_tag.sh -c
+# and follow the instructions
+
+
 # Function to list all previous Git tags
 function list_previous_tags {
   echo "Previous Git tags:"
