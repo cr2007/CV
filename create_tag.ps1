@@ -58,6 +58,14 @@ function Get-TagName {
 		Get-TagName
 	}
 
+	while (git tag | findstr $tag_name) {
+		# Print out a message
+		Write-Host "Error: " -ForegroundColor DarkRed -NoNewline; Write-Host "Tag name '$($tag_name)' already exists"
+
+		# Prompt the user again
+		Get-TagName
+	}
+
 	# Return the tag name
 	return $tag_name
 }
