@@ -43,7 +43,7 @@ function Get-CommitHashExcerpt {
 # Function to prompt the user for tag name
 function Get-TagName {
 	# Read the tag name
-	Read-Host -Prompt "Enter the tag name: "
+	$tag_name = Read-Host -Prompt "Enter the tag name: "
 
 	# Write-Host "Enter the tag name: " -NoNewline
 	# $tag_name = Read-Host
