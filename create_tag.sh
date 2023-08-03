@@ -42,6 +42,12 @@ function get_tag_name {
     echo -e "\e[31;1mError:\e[0m Tag name cannot be empty."
     get_tag_name
   fi
+
+  # Check if the tag already exists
+  while git tag | grep -q "^$tag_name$"; do
+    echo -e "\e[31;1mError:\e[0m Tag '$tag_name' already exists."
+    get_tag_name
+  done
 }
 
 # Check if the script is called with the -c flag
@@ -65,12 +71,6 @@ if [[ "$1" == "-c" ]]; then
   # Prompt the user for tag name
   get_tag_name
 
-  # Check if the tag already exists
-  while git tag | grep -q "^$tag_name$"; do
-    echo -e "\e[31;1mError:\e[0m Tag '$tag_name' already exists."
-    get_tag_name
-  done
-
   # Run the command to create the tag for the specified commit
   git tag "$tag_name" "$full_commit_hash"
 
@@ -80,12 +80,6 @@ else
 
   # Prompt the user for tag name
   get_tag_name
-
-  # Check if the tag already exists
-  while git tag | grep -q "^$tag_name$"; do
-    echo -e "\e[31;1mError:\e[0m Tag '$tag_name' already exists."
-    get_tag_name
-  done
 
   # Run the command to create the tag for the latest commit
   git tag "$tag_name"
