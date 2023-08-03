@@ -63,7 +63,7 @@ function Get-TagName {
 		Write-Host "Error: " -ForegroundColor DarkRed -NoNewline; Write-Host "Tag name '$($tag_name)' already exists"
 
 		# Prompt the user again
-		Get-TagName
+		$tag_name = Read-Host -Prompt "Enter the tag name"
 	}
 
 	# Return the tag name
