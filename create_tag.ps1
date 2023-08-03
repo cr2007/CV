@@ -2,18 +2,20 @@
 # Usage: create_tag.ps1
 
 # Function to list all previous Git tags
-function list_previous_tags {
+function Get-PreviousTags {
 	# Print out a message
 	Write-Host "Previous Git tags:"
 	git tag
 }
 
 # Function to prompt the user for commit hash
-function get_commit_hash_excerpt {
+function Get-CommitHashExcerpt {
 	# Print out a message
 	$commit_hash_excerpt = Read-Host -Prompt "Enter the commit hash"
+	# Write-Host "Enter the commit hash: " -NoNewLine
 	# Read the commit hash
-	$commit_hash = Read-Host
+	# $commit_hash_excerpt = Read-Host
+
 
 	# Check if the commit hash is empty
 	if ([string]::IsNullOrEmpty($commit_hash_excerpt)) {
@@ -21,7 +23,7 @@ function get_commit_hash_excerpt {
 		Write-Host "Error: " -ForegroundColor DarkRed -NoNewline; Write-Host "Commit hash cannot be empty"
 
 		# Prompt the user again
-		get_commit_hash_excerpt
+		Get-CommitHashExcerpt
 	# else if the commit hash is less than 7 characters
 	} elseif ($commit_hash_excerpt.Length -lt 7) {
 		# Print out error message
@@ -35,5 +37,5 @@ function get_commit_hash_excerpt {
 	}
 
 	# Return the commit hash
-	return $commit_hash
+	return $commit_hash_excerpt
 }
