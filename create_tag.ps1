@@ -1,5 +1,10 @@
-# Creates a tag everytime something is successful
-# Usage: create_tag.ps1
+# To create a tag for the latest
+# commit, run the following command:
+# ./create_tag.sh
+#
+# If you want to tag a particular commit, run the following command
+# ./create_tag.sh -c
+# and follow the instructions
 
 # Function to list all previous Git tags
 function Get-PreviousTags {
