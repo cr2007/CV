@@ -25,7 +25,7 @@ function get_commit_hash_excerpt {
   # Check if the commit hash is empty
   if [ -z "$commit_hash_excerpt" ]; then
     echo -e "\e[31;1mError:\e[0m Commit hash cannot be empty."
-    get_commit_hash
+    get_commit_hash_excerpt
   elif [ ${#commit_hash_excerpt} -lt 7 ]; then
     echo -e "\e[31;1mError:\e[0m Commit hash excerpt must be at least 7 characters long."
     echo -e "Get the hash by running the following command: \e[1;34mgit log\e[0m"
