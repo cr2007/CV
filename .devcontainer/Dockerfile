@@ -17,3 +17,10 @@ ENV LANGUAGE=en_US.UTF-8 LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 # installing cpanm & missing latexindent dependencies
 RUN curl -L http://cpanmin.us | perl - --self-upgrade && \
 	cpanm Log::Dispatch::File YAML::Tiny File::HomeDir
+
+# Installing Gum tool
+RUN apt-get update && apt-get install -y gnupg
+RUN mkdir -p /etc/apt/keyrings && \
+	curl -fsSL https://repo.charm.sh/apt/gpg.key | gpg --dearmor -o /etc/apt/keyrings/charm.gpg && \
+	echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | tee /etc/apt/sources.list.d/charm.list && \
+	apt update && apt install gum
