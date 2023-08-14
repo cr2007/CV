@@ -6,7 +6,9 @@
 		"mhutchie.git-graph",
 		"VisualStudioExptTeam.vscodeintellicode",
 		"EditorConfig.EditorConfig",
-		"github.vscode-github-actions"
+		"github.vscode-github-actions",
+		"GitHub.copilot",
+		"GitHub.copilot-chat"
 	],
 	"unwantedRecommendations": [
 		"GoogleCloudTools.cloudcode",
