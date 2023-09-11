@@ -8,6 +8,8 @@
 		"EditorConfig.EditorConfig",
 		"github.vscode-github-actions",
 		"ms-azuretools.vscode-docker"
+		"GitHub.copilot",
+		"GitHub.copilot-chat"
 	],
 	"unwantedRecommendations": [
 		"GoogleCloudTools.cloudcode",
