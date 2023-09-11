@@ -6,7 +6,8 @@
 		"mhutchie.git-graph",
 		"VisualStudioExptTeam.vscodeintellicode",
 		"EditorConfig.EditorConfig",
-		"github.vscode-github-actions"
+		"github.vscode-github-actions",
+		"ms-azuretools.vscode-docker"
 	],
 	"unwantedRecommendations": [
 		"GoogleCloudTools.cloudcode",
