@@ -1,5 +1,8 @@
 name: LaTeX
 on: [push]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build_latex:
     runs-on: ubuntu-latest
