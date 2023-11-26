@@ -15,6 +15,10 @@ set -e
 
 # Function to list all previous Git tags
 function list_previous_tags {
+	latest_tag=$(git describe --tags --abbrev=0)
+
+	echo -e "Latest Git tag: \e[35;1m$latest_tag\e[0m"
+
 	echo "Previous Git tags:"
 	git tag
 }
