@@ -11,5 +11,10 @@
 	"editor.renderWhitespace": "all",
 	"files.trimTrailingWhitespace": true,
 	"editor.wordWrap": "on",
-	"git.autofetch": true
+	"git.autofetch": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"audioCues.terminalCommandFailed": "on",
+	"audioCues.format": "userGesture",
+	"audioCues.save": "always",
 }
