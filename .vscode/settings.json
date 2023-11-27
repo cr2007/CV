@@ -17,4 +17,5 @@
 	"audioCues.terminalCommandFailed": "on",
 	"audioCues.format": "userGesture",
 	"audioCues.save": "always",
+	"terminal.integrated.defaultProfile.linux": "zsh"
 }

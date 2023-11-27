@@ -12,9 +12,19 @@
 			]
 		}
 	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "cv"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"version": "latest"
+		}
+	},
 	"dockerFile": "Dockerfile",
 	// "mounts": [
 	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
 	// ]
-	"postStartCommand": "chmod +x create_tag.sh"
+	"postStartCommand": "sudo chmod +x create_tag.sh",
+	"remoteUser": "cv"
 }
