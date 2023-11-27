@@ -16,6 +16,6 @@
 	"diffEditor.hideUnchangedRegions.enabled": true,
 	"audioCues.terminalCommandFailed": "on",
 	"audioCues.format": "userGesture",
-	"audioCues.save": "always",
+	"audioCues.save": "userGesture",
 	"terminal.integrated.defaultProfile.linux": "zsh"
 }
