@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # installing texlive and utils
 RUN apt-get update && \
-	apt-get -y install --no-install-recommends pandoc texlive texlive-latex-extra texlive-extra-utils texlive-fonts-extra texlive-bibtex-extra biber latexmk make git procps locales curl && \
+	apt-get -y install --no-install-recommends pandoc texlive texlive-latex-extra texlive-extra-utils texlive-fonts-extra texlive-bibtex-extra biber latexmk make git procps locales curl zsh && \
 	rm -rf /var/lib/apt/lists/*
 
 # generating locales
@@ -24,3 +24,8 @@ RUN mkdir -p /etc/apt/keyrings && \
 	curl -fsSL https://repo.charm.sh/apt/gpg.key | gpg --dearmor -o /etc/apt/keyrings/charm.gpg && \
 	echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | tee /etc/apt/sources.list.d/charm.list && \
 	apt update && apt install gum
+
+# Install Oh My Zsh
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# RUN yes | unminimize

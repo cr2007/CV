@@ -9,14 +9,13 @@
 				"mhutchie.git-graph",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"EditorConfig.EditorConfig"
-			]
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh"
+			}
 		}
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/common-utils:2": {
-			"installZsh": "true",
-			"username": "cv"
-		},
 		"ghcr.io/devcontainers/features/github-cli:1": {
 			"version": "latest"
 		}
@@ -25,6 +24,5 @@
 	// "mounts": [
 	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
 	// ]
-	"postStartCommand": "sudo chmod +x create_tag.sh",
-	"remoteUser": "cv"
+	"postStartCommand": "chmod +x create_tag.sh"
 }
