@@ -25,8 +25,6 @@ function list_previous_tags {
 
 # Function to prompt the user for tag name
 function get_tag_name {
-	# read -p "Enter the tag name: " tag_name
-
 	# Exit the program when I do Ctrl+ C
 	trap "exit" INT
 
