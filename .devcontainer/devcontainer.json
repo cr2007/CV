@@ -15,11 +15,6 @@
 			}
 		}
 	},
-	"features": {
-		"ghcr.io/devcontainers/features/github-cli:1": {
-			"version": "latest"
-		}
-	},
 	"dockerFile": "Dockerfile",
 	// "mounts": [
 	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"

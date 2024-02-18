@@ -1,21 +1,6 @@
 {
 	"name": "latex-env",
 	"dockerFile": "Dockerfile",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"James-Yu.latex-workshop",
-				"vscode-icons-team.vscode-icons",
-				"eamodio.gitlens",
-				"mhutchie.git-graph",
-				"VisualStudioExptTeam.vscodeintellicode",
-				"EditorConfig.EditorConfig"
-			],
-			"settings": {
-				"terminal.integrated.defaultProfile.linux": "zsh"
-			}
-		}
-	},
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {
 			"version": "latest"
@@ -24,5 +9,4 @@
 	// "mounts": [
 	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
 	// ]
-	"postStartCommand": "chmod +x create_tag.sh"
 }
