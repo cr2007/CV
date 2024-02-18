@@ -1,5 +1,6 @@
 {
 	"name": "latex-env",
+	"image": "ghcr.io/cr2007/cv:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -15,7 +16,6 @@
 			}
 		}
 	},
-	"dockerFile": "Dockerfile",
 	// "mounts": [
 	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
 	// ]
