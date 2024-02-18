@@ -22,10 +22,13 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Convert Repository name to lower case
+      id: lowercase
+      run: echo "::set-output name=repo::$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')"
     - name: Pre-build Dev Container image
       uses: devcontainers/ci@v0.2
       with:
         subFolder: .github
-        imageName: ghcr.io/${{ github.repository }}
+        imageName: ghcr.io/${{ steps.lowercase.outputs.repo }}
         cacheFrom: ghcr.io/${{ github.repository }}
         push: always
