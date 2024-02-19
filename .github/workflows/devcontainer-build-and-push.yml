@@ -24,11 +24,11 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Convert Repository name to lower case
       id: lowercase
-      run: echo "::set-output name=repo::$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')"
+      run: echo "REPO=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
     - name: Pre-build Dev Container image
       uses: devcontainers/ci@v0.3
       with:
         subFolder: .github
-        imageName: ghcr.io/${{ steps.lowercase.outputs.repo }}
+        imageName: ghcr.io/${{ env.REPO }}
         cacheFrom: ghcr.io/${{ github.repository }}
         push: always
