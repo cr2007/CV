@@ -9,7 +9,8 @@
 				"eamodio.gitlens",
 				"mhutchie.git-graph",
 				"VisualStudioExptTeam.vscodeintellicode",
-				"EditorConfig.EditorConfig"
+				"EditorConfig.EditorConfig",
+				"github.vscode-github-actions"
 			],
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh"
