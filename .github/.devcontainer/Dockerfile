@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # installing texlive and utils
 RUN apt-get update && \
-	apt-get -y install --no-install-recommends pandoc texlive texlive-latex-extra texlive-extra-utils texlive-fonts-extra texlive-bibtex-extra biber latexmk make git procps locales curl zsh && \
+	apt-get -y install --no-install-recommends --fix-missing pandoc texlive texlive-latex-extra texlive-extra-utils texlive-fonts-extra texlive-bibtex-extra biber latexmk make git procps locales curl zsh && \
 	rm -rf /var/lib/apt/lists/*
 
 # generating locales
