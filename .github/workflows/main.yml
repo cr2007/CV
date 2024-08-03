@@ -25,3 +25,14 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: Chandrashekhar_Resume.pdf
+      - name: Notify if package was published successfully
+        if: success()
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          curl \
+            -H $"Title: CV ${{ github.ref_name }} published successfully" \
+            -H "X-Tags: CV, version-update, updated-link" \
+            -H "Content-Type: text/plain" \
+            -d $"CV ${{ github.ref_name }} published successfully.\nYou can find the updated CV at https://github.com/cr2007/CV/releases/latest/download/Chandrashekhar_Resume.pdf\nStatus: ${{job.status}}" \
+            ${{ vars.NTFY_GACTIONS_URL }}
