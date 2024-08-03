@@ -1,5 +1,10 @@
 name: LaTeX
-on: [push]
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -32,7 +37,7 @@ jobs:
         run: |
           curl \
             -H $"Title: CV ${{ github.ref_name }} published successfully" \
-            -H "X-Tags: CV, version-update, updated-link" \
+            -H "X-Tags: memo, CV, version-update, updated-link" \
             -H "Content-Type: text/plain" \
-            -d $"CV ${{ github.ref_name }} published successfully.\nYou can find the updated CV at https://github.com/cr2007/CV/releases/latest/download/Chandrashekhar_Resume.pdf\nStatus: ${{job.status}}" \
+            -d "CV ${{ github.ref_name }} published successfully.\nYou can find the updated CV at https://github.com/cr2007/CV/releases/latest/download/Chandrashekhar_Resume.pdf\nStatus: ${{job.status}}" \
             ${{ vars.NTFY_GACTIONS_URL }}
