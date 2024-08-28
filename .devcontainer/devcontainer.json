@@ -10,7 +10,8 @@
 				"mhutchie.git-graph",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"EditorConfig.EditorConfig",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"usernamehw.errorlens"
 			],
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh"
