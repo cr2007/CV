@@ -22,6 +22,6 @@
 	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
 	// ]
 
-	"postCreateCommand": "./.devcontainer/setup_dev_env.sh",
+	"postCreateCommand": "chmod +x ./.devcontainer/setup_dev_env.sh && ./.devcontainer/setup_dev_env.sh",
 	"postStartCommand": "chmod +x create_tag.sh"
 }
