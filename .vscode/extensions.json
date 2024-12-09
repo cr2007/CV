@@ -8,8 +8,7 @@
 		"EditorConfig.EditorConfig",
 		"github.vscode-github-actions",
 		"ms-azuretools.vscode-docker",
-		"GitHub.copilot",
-		"GitHub.copilot-chat"
+		"danielsanmedium.dscodegpt"
 	],
 	"unwantedRecommendations": [
 		"GoogleCloudTools.cloudcode",
