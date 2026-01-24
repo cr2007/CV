@@ -23,5 +23,17 @@
 	},
 	"accessibility.signals.format": {
 		"sound": "userGesture"
-	}
+	},
+	"gitlens.views.scm.grouped.views": {
+        "commits": false,
+        "branches": false,
+        "remotes": false,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "repositories": true,
+        "searchAndCompare": true,
+        "launchpad": true
+    },
 }
