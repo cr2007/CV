@@ -1,10 +1,15 @@
 {
 	"name": "latex-env",
-	"image": "ghcr.io/cr2007/cv:latest",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},            // GitHub CLI
+		"ghcr.io/michidk/devcontainers-features/typst:1": {},         // Typst Feature
+		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {} // Homebrew
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"James-Yu.latex-workshop",
+				"myriad-dreamin.tinymist",
 				"vscode-icons-team.vscode-icons",
 				"eamodio.gitlens",
 				"mhutchie.git-graph",
@@ -17,10 +22,6 @@
 			}
 		}
 	},
-	// "mounts": [
-	//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=~/.gitconfig,type=bind,consistency=cached"
-	// ]
 
-	"postCreateCommand": "chmod +x ./.devcontainer/setup_dev_env.sh && ./.devcontainer/setup_dev_env.sh",
-	"postStartCommand": "chmod +x create_tag.sh"
+	"postCreateCommand": "brew install gum"
 }
