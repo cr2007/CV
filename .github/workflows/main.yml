@@ -1,4 +1,4 @@
-name: LaTeX
+name: Typst Build and Publish
 
 on:
   push:
@@ -9,7 +9,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  build_latex:
+  build_typst:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -38,11 +38,11 @@ jobs:
           mv example.metadata.yml metadata.yml
 
           yq -i '
-            .name             = strenv(CV_NAME)      |
-            .email            = strenv(CV_EMAIL)       |
-            .phone            = strenv(CV_PHONE)           |
-            .location         = strenv(CV_LOCATION)              |
-            .githubUsername   = strenv(CV_GITHUB_USERNAME)      |
+            .name             = strenv(CV_NAME)              |
+            .email            = strenv(CV_EMAIL)             |
+            .phone            = strenv(CV_PHONE)             |
+            .location         = strenv(CV_LOCATION)          |
+            .githubUsername   = strenv(CV_GITHUB_USERNAME)   |
             .linkedinUsername = strenv(CV_LINKEDIN_USERNAME) |
             .website          = strenv(CV_WEBSITE)
           ' metadata.yml
