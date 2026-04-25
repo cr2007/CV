@@ -1,14 +1,13 @@
 {
 	"recommendations": [
-		"James-Yu.latex-workshop",
+		"myriad-dreamin.tinymist",
 		"vscode-icons-team.vscode-icons",
 		"eamodio.gitlens",
 		"mhutchie.git-graph",
-		"VisualStudioExptTeam.vscodeintellicode",
 		"EditorConfig.EditorConfig",
 		"github.vscode-github-actions",
 		"ms-azuretools.vscode-docker",
-		"danielsanmedium.dscodegpt"
+		"usernamehw.errorlens",
 	],
 	"unwantedRecommendations": [
 		"GoogleCloudTools.cloudcode",
