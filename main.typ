@@ -213,8 +213,3 @@
 - Directed a 6-member core team to deliver workshops \& events on Google technologies for a diverse student community
 - Mentored peers through delegation, coaching, and technical enablement, fostering trust and impactful collaboration
 - Boosted club engagement by 50\% through creative outreach and community-driven initiatives.
-
-
-// \href{https://cr2007.github.io/chatgpt-url-maker}{\textbf{Live Project}} $\vert$ \href{https://github.com/cr2007/chatgpt-url-maker}{\textbf{Project Link}}}
-
-// ... more headers and stuff below
