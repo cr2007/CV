@@ -87,28 +87,6 @@
 )
 
 #v(-0.5em)
-== Education
-
-#edu(
-  institution: "Georgia Institute of Technology",
-  location: "Dubai, UAE",
-  dates: dates-helper(start-date: "Jan 2026", end-date: "Present"),
-  degree: "Master's of Science, Computer Science",
-)
-#v(-0.25em)
-#text(size: 9pt)[*Courses:* Introduction to Information Security]
-// - Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
-
-#edu(
-  institution: "Heriot-Watt University",
-  location: "Dubai, UAE",
-  dates: "Batch of 2024",
-  degree: "Bachelor's of Science, Computer Science (Hons.)",
-)
-#v(-0.25em)
-#text(size: 9pt)[*Courses:* Data Visualization and Analytics, Digital Forensics, Computer Network Security, Industrial Programming, Data Communications \& Networking, Operating Systems \& Concurrency, Data Structures and Algorithms, Hardware-Software Interface]
-
-#v(-0.5em)
 
 == Projects
 
@@ -199,7 +177,28 @@
   url: "coursera.org/verify/professional-cert/KXSX89ULVN5F"
 )
 
-#v(-3pt)
+#v(-0.5pt)
+
+== Education
+
+#edu(
+  institution: "Georgia Institute of Technology",
+  location: "Dubai, UAE",
+  dates: dates-helper(start-date: "Jan 2026", end-date: "Present"),
+  degree: "Master's of Science, Computer Science",
+)
+#v(-0.25em)
+#text(size: 9pt)[*Courses:* Introduction to Information Security]
+// - Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
+
+#edu(
+  institution: "Heriot-Watt University",
+  location: "Dubai, UAE",
+  dates: "Batch of 2024",
+  degree: "Bachelor's of Science, Computer Science (Hons.)",
+)
+#v(-0.25em)
+#text(size: 9pt)[*Courses:* Data Visualization and Analytics, Digital Forensics, Computer Network Security, Industrial Programming, Data Communications \& Networking, Operating Systems \& Concurrency, Data Structures and Algorithms, Hardware-Software Interface]
 
 == Volunteer Experience
 
