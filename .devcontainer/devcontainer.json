@@ -1,5 +1,5 @@
 {
-	"name": "latex-env",
+	"name": "CV Dev Container environment",
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {},            // GitHub CLI
