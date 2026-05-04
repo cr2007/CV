@@ -79,7 +79,7 @@
   column-gutter: 0.5em,
   // align: (left, right),
   [*Languages:*], [Python, Go, Java (Spring Boot), Bash, SQL, PostgreSQL, JavaScript, PowerShell, HTML, CSS, C\#],
-  [*Tools:*], text(spacing: 45%)[Git, GitHub, Bitbucket, Ollama, Figma, ChatGPT, CI/CD, Docker, Kubernetes, GitHub Actions, Puppet],
+  [*Tools:*], [Git, GitHub, Bitbucket, Ollama, Figma, ChatGPT, CI/CD, Docker, Kubernetes, GitHub Actions],
   [*Soft Skills:*], [Communication, Collaboration, Leadership, Problem Solving, Stakeholder Management, Delegation],
   [*Business Skills:*], [Analytical Skills, Organizational Skills, Strategy, Microsoft Excel, MS Office, Research],
   [*Platforms:*], [Linux, Ubuntu, Windows, Amazon Web Services, AWS S3, Google Cloud Platform, Web],
