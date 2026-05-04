@@ -47,9 +47,10 @@ jobs:
             .website          = strenv(CV_WEBSITE)
           ' metadata.yml
 
+      # Set the 'NAME' variable in the 'Secrets and Variables' section of your 'Actions' settings
       - name: Compile Typst to PDF
         if: success()
-        run: typst c main.typ Chandrashekhar_Resume.pdf
+        run: typst c main.typ ${{ secrets.NAME }}_Resume.pdf
 
       - name: Check output (after rename)
         run: ls
@@ -58,7 +59,7 @@ jobs:
         uses: softprops/action-gh-release@v3
         if: github.ref_type == 'tag'
         with:
-          files: Chandrashekhar_Resume.pdf
+          files: ${{ secrets.NAME }}_Resume.pdf
 
       - name: Notify if CV was compiled successfully
         if: success()
@@ -67,12 +68,12 @@ jobs:
             -H $"Title: CV ${{ github.ref_name }} published successfully" \
             -H "X-Tags: memo, CV, version-update, updated-link" \
             -H "Content-Type: text/plain" \
-            -d $'CV ${{ github.ref_name }} published successfully.\nYou can find the updated CV at https://github.com/cr2007/CV/releases/latest/download/Chandrashekhar_Resume.pdf\nStatus: ${{job.status}}' \
+            -d $'CV ${{ github.ref_name }} published successfully.\nYou can find the updated CV at https://github.com/${{ github.repository }}/releases/latest/download/${{ secrets.NAME }}_Resume.pdf\nStatus: ${{job.status}}' \
             ${{ vars.NTFY_GACTIONS_URL }}
 
       - name: Removes older releases
         uses: Nats-ji/delete-old-releases@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          keep-count: 3
-          keep-old-minor-releases: false
+          keep-count: 3                  # Keeps only the last 'n' releases
+          keep-old-minor-releases: false # Keeps the latest release for any older versions
