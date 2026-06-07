@@ -53,9 +53,9 @@
 )
 #v(-0.5em)
 
-- Developing scalable Spring Boot microservices with secure, reactive APIs for multi-module backend systems on AWS
-- Designing and optimising RESTful APIs for customer-facing  dashboards, improving service delivery efficiency by 30\%
-- Driving efficiency by crafting AI strategies that streamline internal workflows and elevate product experiences
+- Delivered end-to-end backend services for the Customer Payment Portal, from invoice ingestion through payment reconciliation to delivery-order fulfilment, using Kafka, cloud storage, PostgreSQL, and REST APIs
+- Scaled enterprise invoice intake, reducing manual entry, by building bulk Excel template parsing with LOI/customer-type validation and async Kafka submission
+- Hardened production API behaviour by removing stack traces from client-facing errors and
 
 #work(
   title: "Solutions Intern",
@@ -130,17 +130,17 @@
 
 #v(-3pt)
 
-#project(
-  name: "WhatsApp Voice AI Assistant",
-  dates: "August 2024",
-  url: (
-    "Project Link": "github.com/cr2007/whatsapp-voice-ai-assistant",
-  ),
-  tech: ("Go", "Python", "OpenAI Whisper", "Groq API"),
-  desc: "Developed a microservice-based WhatsApp bot that transcribes voice messages and generates AI responses.",
-)
+// #project(
+//   name: "WhatsApp Voice AI Assistant",
+//   dates: "August 2024",
+//   url: (
+//     "Project Link": "github.com/cr2007/whatsapp-voice-ai-assistant",
+//   ),
+//   tech: ("Go", "Python", "OpenAI Whisper", "Groq API"),
+//   desc: "Developed a microservice-based WhatsApp bot that transcribes voice messages and generates AI responses.",
+// )
 
-#v(-3pt)
+// #v(-3pt)
 
 == Awards and Certifications
 
