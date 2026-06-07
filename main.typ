@@ -188,7 +188,7 @@
   degree: "Master's of Science, Computer Science",
 )
 #v(-0.25em)
-#text(size: 9pt)[*Courses:* Introduction to Information Security]
+#text(size: 9pt)[*Courses:* Introduction to Information Security, Computer Networks]
 // - Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
 
 #edu(
@@ -203,12 +203,11 @@
 == Volunteer Experience
 
 #work(
-  company: link("https://gdg.community.dev/gdg-on-campus-heriot-watt-university-dubai-dubai-united-arab-emirates")[Google Developer Student Clubs],
-  title: "Chapter Lead",
-  dates: dates-helper(start-date: "July 2022", end-date: "June 2023"),
+  company: link("https://dubai.aitinkerers.org")[AI Tinkerers Dubai],
+  title: "Co-Organiser",
+  dates: dates-helper(start-date: "May 2025", end-date: "Present"),
   location: "Dubai, UAE"
 )
 
-- Directed a 6-member core team to deliver workshops \& events on Google technologies for a diverse student community
-- Mentored peers through delegation, coaching, and technical enablement, fostering trust and impactful collaboration
-- Boosted club engagement by 50\% through creative outreach and community-driven initiatives.
+- Co-organized AI Tinkerers Dubai, growing the chapter 128% to 1,082 subscribers across 13 months.
+- Screening registrations against active-builder criteria, sustaining 25%+ first-time attendance per event across a curated, GitHub-verified community.
