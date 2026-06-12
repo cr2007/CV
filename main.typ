@@ -55,7 +55,7 @@
 
 - Delivered end-to-end backend services for the Customer Payment Portal, from invoice ingestion through payment reconciliation to delivery-order fulfilment, using Kafka, cloud storage, PostgreSQL, and REST APIs
 - Scaled enterprise invoice intake, reducing manual entry, by building bulk Excel template parsing with LOI/customer-type validation and async Kafka submission
-- Hardened production API behaviour by removing stack traces from client-facing errors and
+- Hardened production API behavior by tackling client-facing errors and tightening input validation.
 
 #work(
   title: "Solutions Intern",
