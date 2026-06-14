@@ -209,5 +209,5 @@
   location: "Dubai, UAE"
 )
 
-- Co-organized AI Tinkerers Dubai, growing the chapter 128% to 1,082 subscribers across 13 months.
+- Co-organizing the Dubai chapter of AI Tinkerers, growing the chapter 128% to 1,082 subscribers across 13 months.
 - Screening registrations against active-builder criteria, sustaining 25%+ first-time attendance per event across a curated, GitHub-verified community.
