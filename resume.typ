@@ -1,4 +1,4 @@
-#import "@preview/scienceicons:0.1.0": orcid-icon
+#import "@preview/scienceicons:0.1.0": orcid-icon, linkedin-icon, github-icon, email-icon, website-icon
 
 #let resume(
   author: "",
@@ -96,10 +96,10 @@
       #{
         let items = (
           contact-item(pronouns),
-          contact-item(email, link-type: "mailto:"),
-          contact-item(github, link-type: "https://"),
-          contact-item(linkedin, link-type: "https://"),
-          contact-item(personal-site, link-type: "https://"),
+          contact-item(email, prefix: [#email-icon() ], link-type: "mailto:"),
+          contact-item(github, prefix: [#github-icon() ], link-type: "https://"),
+          contact-item(linkedin, prefix: [#linkedin-icon() ], link-type: "https://"),
+          contact-item(personal-site, prefix: [#website-icon() ], link-type: "https://"),
           contact-item(orcid, prefix: [#orcid-icon(color: rgb("#AECD54"))orcid.org/], link-type: "https://orcid.org/"),
         )
         items.filter(x => x != none).join("  |  ")
