@@ -53,9 +53,9 @@
 )
 #v(-0.5em)
 
-- Delivered end-to-end backend services for the Customer Payment Portal, from invoice ingestion through payment reconciliation to delivery-order fulfilment, using Kafka, cloud storage, PostgreSQL, and REST APIs
-- Scaled enterprise invoice intake, reducing manual entry, by building bulk Excel template parsing with LOI/customer-type validation and async Kafka submission
-- Hardened production API behavior by tackling client-facing errors and tightening input validation.
+- Built the backend for the Customer Payment Portal (CPP) from scratch and shipped it to production, enabling end-to-end invoice-request, delivery-order, and payment workflows across multiple shipping-line and customer types
+#text(spacing: 68%)[- Extended platform to payment partners by integrating secured house payment flow with validation & consent enforcement]
+#text(spacing: 68%)[- Hardened India eDO platform with compliance & data-quality enhancements improving operational accuracy & reporting]
 
 #work(
   title: "Solutions Intern",
