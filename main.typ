@@ -96,7 +96,8 @@
   // role: "",
   url: (
     "Live Project": "cr2007.github.io/aichat-url-maker",
-    "Project Link": "github.com/cr2007/aichat-url-maker"
+    "Project Link": "github.com/cr2007/aichat-url-maker",
+    "DeepWiki": "deepwiki.com/cr2007/aichat-url-maker",
   ),
   tech: ("TypeScript", "React", "Vite", "Bun"),
   desc: "Built a web app that generates shareable, prefilled prompt URLs for AI chat tools."
