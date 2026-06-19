@@ -169,15 +169,6 @@
   url: "linkedin.com/learning/certificates/89ecc674e4f0587a88390cc07ce509093d8b63cd8bcb02e3fd833e966bba7ea8"
 )
 
-#v(-3pt)
-
-#certificates(
-  name: "Google IT Support Specialization",
-  issuer: "Coursera",
-  date: "June 2022",
-  url: "coursera.org/verify/professional-cert/KXSX89ULVN5F"
-)
-
 #v(-0.5pt)
 
 == Education
