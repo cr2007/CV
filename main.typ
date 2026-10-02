@@ -56,6 +56,7 @@
 - Built the backend for the Customer Payment Portal (CPP) from scratch and shipped it to production, enabling end-to-end invoice-request, delivery-order, and payment workflows across multiple shipping-line and customer types
 #text(spacing: 68%)[- Extended platform to payment partners by integrating secured house payment flow with validation & consent enforcement]
 #text(spacing: 68%)[- Hardened India eDO platform with compliance & data-quality enhancements improving operational accuracy & reporting]
+- Built proforma invoicing system for the UAE Sales team with in-browser PDFs and audit-logged record changes
 
 #work(
   title: "Solutions Intern",
