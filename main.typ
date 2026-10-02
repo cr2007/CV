@@ -175,14 +175,14 @@
 
 == Education
 
-#edu(
-  institution: "Georgia Institute of Technology",
-  location: "Dubai, UAE",
-  dates: dates-helper(start-date: "Jan 2026", end-date: "Present"),
-  degree: "Master's of Science, Computer Science",
-)
-#v(-0.25em)
-#text(size: 9pt)[*Courses:* Introduction to Information Security, Computer Networks]
+// #edu(
+//   institution: "Georgia Institute of Technology",
+//   location: "Dubai, UAE",
+//   dates: dates-helper(start-date: "Jan 2026", end-date: "Present"),
+//   degree: "Master's of Science, Computer Science",
+// )
+// #v(-0.25em)
+// #text(size: 9pt)[*Courses:* Introduction to Information Security, Computer Networks]
 // - Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
 
 #edu(
@@ -203,5 +203,5 @@
   location: "Dubai, UAE"
 )
 
-- Co-organizing the Dubai chapter of AI Tinkerers, growing the chapter 128% to 1,082 subscribers across 13 months.
+- Co-organizing the Dubai chapter of AI Tinkerers, growing the chapter 128% to 1,300+ members across 15 months.
 - Screening registrations against active-builder criteria, sustaining 25%+ first-time attendance per event across a curated, GitHub-verified community.
